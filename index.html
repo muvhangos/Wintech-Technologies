@@ -137,3 +137,109 @@
       color: white;
       border: none;
       padding: 8px 16px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <header id="home">
+    <h1>Welcome to Wintech Technologies</h1>
+    <p>Smart IT Solutions, Repairs, and Web Services for Modern Businesses.</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="card">
+      <h3>Printer Servicing & Maintenance</h3>
+      <p>We service <b>Label Printers</b>, <b>Back Office Printers</b>, and <b>Receipt Printers</b> efficiently and affordably.</p>
+    </div>
+    <div class="card">
+      <h3>Website & App Development</h3>
+      <p>Professional web and app design, hosting, and maintenance services tailored for your brand.</p>
+    </div>
+    <div class="card">
+      <h3>PC Repairs & Networking</h3>
+      <p>Expert support for <b>Networking</b>, <b>Cloud Computing</b>, <b>Wireless Connections</b>, and more.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Wintech Technologies</h2>
+    <div class="card">
+      <p>Wintech Technologies is a South African-based IT solutions company providing reliable, affordable, and modern technology services. 
+      Our goal is to deliver innovative tech support — from printers to custom web applications — that keeps your business running efficiently.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:service@wintech.co.za">service@wintech.co.za</a></p>
+      <p>Phone / WhatsApp: <a href="https://wa.me/27837872798" target="_blank">+27 83 787 2798</a></p>
+
+      <div class="social-buttons">
+        <a href="https://wa.me/27837872798" target="_blank" class="whatsapp">📱 Chat on WhatsApp</a>
+        <a href="https://www.facebook.com/wintechtechnologies" target="_blank" class="facebook">👍 Visit Facebook</a>
+      </div>
+
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Wintech Technologies | <a href="mailto:service@wintech.co.za" style="color:white;">service@wintech.co.za</a></p>
+  </footer>
+
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <h3>✅ Message Sent Successfully!</h3>
+      <p>Thank you for contacting Wintech Technologies. We’ll respond soon.</p>
+      <button class="close-btn" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const modal = document.getElementById('successModal');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      modal.style.display = 'flex';
+      form.reset();
+    });
+
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
